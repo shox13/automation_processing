@@ -33,6 +33,7 @@ teen=''
 mob={}
 ticker=int()
 a=int()
+o=0
 
 
 #function reads selected column's indexed data from location !!!!REPEAT!!!!!
@@ -99,31 +100,24 @@ def match(i):#==================================================================
         elif local_0[i]=='0x00':
                 Length[i]='0'  
         else:
-                local_0[i]==Length[i] 
+                o=o+1
         return  Length
 
 
 
 def circle_of_life(ticker,mob,a):#naaa zabanennyaaa!!!!!==================================================================
-        while a<len(ticker):
+           while a<len(ticker):
                 if local_0[a]=='0x10':
                         local_0[a]='1'
                         a=a+1
-                        teen=str(local_0[a])
-                        mob[a]=teen
+                        mob[a]='1'
                 elif local_0[a]=='0x00':
                         local_0[a]='0'
                         a=a+1
-                        teen=str(local_0[a])
-                        mob[a]=teen
+                        mob[a]='0'
                 else:
-                        local_0[a]==Length[i]
-                        a=a+1
-                        teen=str(local_0[a])
-                        mob[a]=teen
-        return  local_0
-
-       
+                        o=o+1
+        
         mob=str(mob)
         mob= mob.replace("2","")
         mob= mob.replace("3","")
@@ -149,6 +143,7 @@ def circle_of_life(ticker,mob,a):#naaa zabanennyaaa!!!!!========================
 
 
 #==========================================================================================================================
+o=0
 circle_of_life(local_0,mob,0)
 
 #Leave an uplifting message================================================================================================
